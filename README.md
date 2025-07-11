@@ -1,1 +1,1 @@
-# projects - This is a simple calculator program  in c++ that can add, subtract, multiply and divide two numbers. I am currently working on adding more operations to it like modulus, power, sin/cos/tan , etc.
+# projects - This is a simple calculator program  in c++ that can add, subtract, multiply and divide two numbers. It can also perform operations like modulus, powers and division by zero. I am currently working on adding sin/cos/tan and other complex operations possible on a regular scientific calculator.
