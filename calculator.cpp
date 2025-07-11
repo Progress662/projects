@@ -1,33 +1,46 @@
-#include<iostream>
+#include <iostream>
+#include <cmath>  // For pow()
 using namespace std;
 
 int main() {
-    char operator_char;  // Renamed variable
-    cout << "Enter operator: ";
+    char operator_char;
+    cout << "Enter operator (+, -, *, /, %, ^): ";
     cin >> operator_char;
 
-    int x;
+    int x, y;
     cout << "Enter first number: ";
     cin >> x;
 
-    int y;
     cout << "Enter second number: ";
     cin >> y;
 
-    if (operator_char == '+') {
-        cout << x + y;
-    } else if (operator_char == '-') {
-        cout << x - y;
-    } else if (operator_char == '*') {
-        cout << x * y;
-    } else if (operator_char == '/') {
-        if (y != 0) {
-            cout << x / y;
-        } else {
-            cout << "Division by zero is not allowed";
-        }
-    } else {
-        cout << "Invalid operator";
+    switch (operator_char) {
+        case '+':
+            cout << "Result: " << x + y << endl;
+            break;
+        case '-':
+            cout << "Result: " << x - y << endl;
+            break;
+        case '*':
+            cout << "Result: " << x * y << endl;
+            break;
+        case '/':
+            if (y != 0)
+                cout << "Result: " << x / y << endl;
+            else
+                cout << "Error: Division by zero is not allowed." << endl;
+            break;
+        case '%':
+            if (y != 0)
+                cout << "Result: " << x % y << endl;
+            else
+                cout << "Error: Modulus by zero is not allowed." << endl;
+            break;
+        case '^':
+            cout << "Result: " << pow(x, y) << endl;
+            break;
+        default:
+            cout << "Invalid operator." << endl;
     }
 
     return 0;
